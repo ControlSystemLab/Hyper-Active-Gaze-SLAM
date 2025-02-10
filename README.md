@@ -16,3 +16,9 @@ First run all driver nodes of the sensors (IMU, 3D LiDAR, 2D LiDAR, camera etc) 
 
 ## Debug potential issues when using LiVOX LiDARS (MID 70) with ROS-2
 See https://blog.csdn.net/omnas/article/details/145163154
+
+## Acknowledgement
+
+Thanks for the works:  
+
+[LIO-Livox](https://github.com/Olive-Wang/Lio-Livox-noted)
