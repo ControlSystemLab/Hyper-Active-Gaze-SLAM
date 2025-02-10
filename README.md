@@ -4,10 +4,10 @@ A ROS2-based package for omni-directional robots with gimbal to actively control
 
 ## Dependencies
 
-ROS2 (Tested with IRON)
-PCL
-livox-ros-driver2
-livox-interfaces (For MID-70 etc)
-gridmap (https://github.com/ANYbotics/grid_map)
+<p>ROS2 (Tested with IRON)
+<br>PCL
+<br>livox-ros-driver2
+<br>livox-interfaces (For MID-70 etc)
+<br>gridmap (https://github.com/ANYbotics/grid_map)</p>
 
 
