@@ -1,0 +1,36 @@
+robot_1:
+  controller_manager:
+    ros__parameters:
+      update_rate: 100  # Hz
+
+      forward_velocity_controller:
+        type: forward_command_controller/ForwardCommandController
+
+      joint_state_broadcaster:
+        type: joint_state_broadcaster/JointStateBroadcaster
+        
+      forward_position_controller:
+        type: forward_command_controller/ForwardCommandController
+
+  forward_velocity_controller:
+    ros__parameters:
+      joints:
+        - robot_1_first_wheel_joint
+        - robot_1_second_wheel_joint
+        - robot_1_third_wheel_joint
+        - robot_1_fourth_wheel_joint
+      interface_name: velocity
+      command_interfaces:
+        - velocity
+      state_interfaces:
+        - velocity
+        
+  forward_position_controller:
+    ros__parameters:
+      joints:
+        - robot_1_gimbal_joint
+      interface_name: position
+      command_interfaces:
+        - position
+      state_interfaces:
+        - position

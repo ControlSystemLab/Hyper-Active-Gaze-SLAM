@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find robot_description)/robot/parts/gimbal/gimbal.gazebo"/>
+  
+  <xacro:macro name="gimbal_v0" params="prefix parent *joint_origin *joint_axis">
+	<joint name="${prefix}_gimbal_joint" type="continuous">
+	  <xacro:insert_block name="joint_origin"/>
+	  <parent link="${parent}"/>
+	  <child link="${prefix}_gimbal_link"/>
+          <limit effort="100" velocity="100"/>
+	  <xacro:insert_block name="joint_axis"/>
+	</joint>
+
+	<link name="${prefix}_gimbal_link">
+	  <visual>
+		<geometry>
+		  <cylinder length="0.05" radius="0.05"/>
+		</geometry>
+	  </visual>
+	  <collision>
+		<geometry>
+		  <cylinder length="0.05" radius="0.05"/>
+		</geometry>
+	  </collision>
+	  <inertial>
+		<origin xyz="0.0 0.0 0.0"/>
+		<mass value="1"/>
+		<inertia ixx="0.000833" ixy="0" ixz="0" iyy="0.000833" iyz="0" izz="0.00125"/>
+	  </inertial>
+          <surface>
+            <friction>
+              <ode>
+                <mu1>1.2</mu1>
+                <mu2>1.2</mu2>
+                <kp>1e15</kp>
+                <kd>1e13</kd>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>0</threshold>
+            </bounce>
+            <contact>
+              <ode>
+                <max_vel>10</max_vel>
+              </ode>
+            </contact>
+          </surface>
+	</link>
+  </xacro:macro>
+  
+</robot>

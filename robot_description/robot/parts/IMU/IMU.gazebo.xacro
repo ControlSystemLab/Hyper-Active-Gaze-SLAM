@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="imu_gazebo_v0">
+    <gazebo reference="imu_link">
+      <gravity>true</gravity>
+          <sensor name="imu_sensor" type="imu">
+            <always_on>true</always_on>
+            <!--update_rate>100</update_rate-->
+            <update_rate>0</update_rate>
+            <visualize>true</visualize>
+            <topic>/livox/imu</topic>
+            <pose>0 0 0 0 0 0</pose>
+              <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+                <topicName>/livox/imu</topicName>
+                <update_rate>0</update_rate>
+                <bodyName>imu_link</bodyName>
+                <updateRateHZ>0</updateRateHZ>
+                <gaussianNoise>0.0</gaussianNoise>
+                <xyzOffset>0 0 0</xyzOffset>
+                <rpyOffset>0 0 0</rpyOffset>
+                <frameName>imu_link</frameName>
+                <ros>
+                    <remapping>~/out:=/livox/imu</remapping>
+                </ros>
+              </plugin>
+          </sensor>
+      </gazebo>
+  </xacro:macro>
+  
+  <xacro:macro name="bodyimu_gazebo_v0">
+    <gazebo reference="bodyimu_link">
+      <gravity>true</gravity>
+          <sensor name="imu_sensor" type="imu">
+            <always_on>true</always_on>
+            <!--update_rate>100</update_rate-->
+            <update_rate>0</update_rate>
+            <visualize>true</visualize>
+            <topic>/bodyimu/data</topic>
+            <pose>0 0 0 0 0 0</pose>
+              <plugin filename="libgazebo_ros_imu_sensor.so" name="bodyimu_plugin">
+                <topicName>/bodyimu/data</topicName>
+                <update_rate>0</update_rate>
+                <bodyName>bodyimu_link</bodyName>
+                <updateRateHZ>0</updateRateHZ>
+                <gaussianNoise>0.0</gaussianNoise>
+                <xyzOffset>0 0 0</xyzOffset>
+                <rpyOffset>0 0 0</rpyOffset>
+                <frameName>bodyimu_link</frameName>
+                <ros>
+                    <remapping>~/out:=/bodyimu/data</remapping>
+                </ros>
+              </plugin>
+          </sensor>
+      </gazebo>
+  </xacro:macro>
+</robot>
