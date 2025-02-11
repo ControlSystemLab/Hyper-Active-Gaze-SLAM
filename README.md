@@ -19,6 +19,8 @@ ros2 launch robot_gazebo main.launch.xml
 ros2 launch livox_gaze_control gaze_control_launch.py
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
+## Demo
+![simulation](https://github.com/user-attachments/assets/e7ce0e1a-79b1-463c-9e4d-65c77707cde4)
 
 ## Debug potential issues when initializing robot model 
 Could be due to conflict of anacoda, simply `conda deactivate`
