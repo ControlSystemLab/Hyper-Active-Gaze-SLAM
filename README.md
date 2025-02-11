@@ -21,4 +21,6 @@ See https://blog.csdn.net/omnas/article/details/145163154
 
 Thanks for the works:  
 
-[LIO-Livox](https://github.com/Olive-Wang/Lio-Livox-noted)
+[LIO-Livox](https://github.com/Olive-Wang/Lio-Livox-noted) 
+
+[gridmap](https://github.com/ANYbotics/grid_map)
