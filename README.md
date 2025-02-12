@@ -21,6 +21,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 ## Demo
 ![simulation](https://github.com/user-attachments/assets/e7ce0e1a-79b1-463c-9e4d-65c77707cde4)
+![gridmap](https://github.com/user-attachments/assets/f99d96e8-58ab-44e3-8153-61e11401f2e0)
 
 ## Debug potential issues when initializing robot model 
 Could be due to conflict of anacoda, simply `conda deactivate`
