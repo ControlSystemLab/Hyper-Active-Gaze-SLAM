@@ -4,7 +4,7 @@ A gazebo play ground for demonstarting gaze control with a keyboard-controlled o
 
 ## Dependencies
 
-<p>ROS2 (Tested with IRON)
+<p>ROS-2 (Tested with Humble)
 <br>PCL
 <br>livox-ros-driver2
 <br>gridmap (https://github.com/ANYbotics/grid_map)
